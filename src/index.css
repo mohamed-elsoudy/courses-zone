@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-cairo: "Cairo", sans-serif;
+  --color-maginta: rgb(55 20 102);
+  --color-weak-maginta: rgb(231 226 236);
+  --color-yello: rgb(216 192 10);
+}
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (width >= 640px) {
+    max-width: 640px;
+  }
+  @media (width >= 768px) {
+    max-width: 768px;
+  }
+  @media (width >= 1024px) {
+    max-width: 1024px;
+  }
+  @media (width >= 1280px) {
+    max-width: 1450px;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+@layer base {
+  body {
+    font-family: var(--font-cairo), "sans-serif";
+  }
+  body {
+    margin: 0;
+  }
+}
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+select {
+  appearance: none;
+}
+a.active {
+  position: relative;
+  transform: translateY(-10px);
+  transition: .3s;
+}
+a.active::before {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px 4px 0 0;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(216 192 10);
+}
