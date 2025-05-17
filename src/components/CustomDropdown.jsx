@@ -1,10 +1,5 @@
 import Select from 'react-select';
 
-const options = [
-  { value: 'ar', label: 'العربيه' },
-  { value: 'en', label: 'English' },
-];
-
 const customStyles = {
   control: (base) => ({
     ...base,
@@ -24,14 +19,15 @@ const customStyles = {
   }),
 };
 
-function CustomDropdown() {
+function CustomDropdown({ options, placeholder, isRtl = true, onChange }) {
   return (
     <div style={{ width: 'auto', margin: 'auto' }}>
       <Select
         options={options}
         styles={customStyles}
-        placeholder="اللغه"
-        isRtl
+        placeholder={placeholder}
+        isRtl={isRtl}
+        onChange={onChange}
         components={{ IndicatorSeparator: () => null }}
       />
     </div>

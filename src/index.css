@@ -6,6 +6,8 @@
   --color-maginta: rgb(55 20 102);
   --color-weak-maginta: rgb(231 226 236);
   --color-yello: rgb(216 192 10);
+  --color-border-grey-maginta: rgb(74 48 109);
+  --spacing-without-header-size: calc(100vh - 96px);
 }
 @utility container {
   margin-inline: auto;
