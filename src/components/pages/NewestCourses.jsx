@@ -1,4 +1,4 @@
-import CourseCard from './CourseCard';
+import CourseCard from '../CourseCard';
 
 // Sample course data
 const courses = [

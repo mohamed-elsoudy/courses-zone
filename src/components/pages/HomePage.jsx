@@ -1,4 +1,3 @@
-import React from 'react';
 import Landing from './Landing';
 import NewestCourses from './NewestCourses';
 import Testimonials from './Testimonials';

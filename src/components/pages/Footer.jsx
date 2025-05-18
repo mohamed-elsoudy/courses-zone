@@ -18,7 +18,7 @@ function Footer() {
             <NavLink to="/" className="hover:text-yello">الرئيسية</NavLink>
             <NavLink to="/about" className="hover:text-yello">عن المدرب</NavLink>
             <NavLink to="/courses" className="hover:text-yello">الدورات التدريبيه</NavLink>
-            <NavLink to="/hello" className="hover:text-yello">المدونه</NavLink>
+            <NavLink to="/blog" className="hover:text-yello">المدونه</NavLink>
             <NavLink to="/consultations" className="hover:text-yello">الاستشارات</NavLink>
             <NavLink to="/podcast" className="hover:text-yello">بودكاست</NavLink>
             <NavLink to="/contact" className="hover:text-yello">تواصل معنا</NavLink>

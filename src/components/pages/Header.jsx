@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faUser, faUserPlus, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import CustomDropdown from './CustomDropDown';
+import CustomDropdown from '../CustomDropDown';
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -37,7 +37,7 @@ function Header() {
             </div>
           </button>
 
-          <NavLink to="/hello" className="hover:text-gray-600">المدونه</NavLink>
+          <NavLink to="/blog" className="hover:text-gray-600">المدونه</NavLink>
           <NavLink to="/consultations" className="hover:text-gray-600">الاستشارات</NavLink>
           <NavLink to="/podcast" className="hover:text-gray-600">بودكاست</NavLink>
           <NavLink to="/contact" className="hover:text-gray-600">تواصل معنا</NavLink>
@@ -60,7 +60,7 @@ function Header() {
                 <NavLink to="/" className="hover:text-gray-600">الرئيسية</NavLink>
                 <NavLink to="/about" className="hover:text-gray-600">عن المدرب</NavLink>
                 <NavLink to="/courses" className="hover:text-gray-600">الدورات التدريبيه &#9662; </NavLink>
-                <NavLink to="/hello" className="hover:text-gray-600">المدونه</NavLink>
+                <NavLink to="/blog" className="hover:text-gray-600">المدونه</NavLink>
                 <NavLink to="/consultations" className="hover:text-gray-600">الاستشارات</NavLink>
                 <NavLink to="/podcast" className="hover:text-gray-600">بودكاست</NavLink>
                 <NavLink to="/contact" className="hover:text-gray-600">تواصل معنا</NavLink>

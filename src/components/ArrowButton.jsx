@@ -1,10 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
 
-function ArrowButton({ text, to = "/blog" }) {
+function ArrowButton({ text }) {
   return (
-    <Link to={to} className="flex items-center text-black font-semibold group bg-weak-maginta hover:bg-maginta hover:text-white p-2.5 h-fit rounded-full">
+    <button className="flex items-center text-black font-semibold group bg-weak-maginta hover:bg-maginta hover:text-white p-2.5 h-fit rounded-full">
       <div className="bg-maginta rounded-full w-6 h-6 flex items-center justify-center ml-2 group-hover:bg-yello transition-all duration-300">
         <FontAwesomeIcon 
           icon={faArrowRight} 
@@ -12,7 +11,7 @@ function ArrowButton({ text, to = "/blog" }) {
         />
       </div>
       <span>{text}</span>
-    </Link>
+    </button>
   );
 }
 

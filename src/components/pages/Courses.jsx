@@ -1,8 +1,8 @@
-import Pagination from "./Pagination";
-import CourseCard from "./CourseCard";
+import Pagination from "../Pagination";
+import CourseCard from "../CourseCard";
 import Footer from "./Footer";
-import CustomPagination from "./CustomPagination";
-import CustomSearch from "./CustomSearch";
+import CustomPagination from "../CustomPagination";
+import CustomSearch from "../CustomSearch";
 // Sample course data
 const courses = [
 {

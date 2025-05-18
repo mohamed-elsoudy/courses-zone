@@ -1,7 +1,7 @@
-import Pagination from "./Pagination";
+import Pagination from "../Pagination";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import ExpertsCard from "./ExpertsCard";
+import ExpertsCard from "../ExpertsCard";
 import Footer from "./Footer"
 function About() {
     return(
@@ -44,7 +44,7 @@ function About() {
                 </div>
             </div>
             <div className="py-24 relative">
-                <div className="hidden 2xl:block h-200 w-1 border-r border-r-3 border-r-yello border-dashed bg-transparent absolute right-1/2 top-80">
+                <div className="hidden 2xl:block h-200 w-1 border-r-3 border-r-yello border-dashed bg-transparent absolute right-1/2 top-80">
                     <div className="w-12 h-12 bg-yello rounded-full text-white font-bold text-3xl text-center pt-1 absolute -right-6">+</div>
                     <div className="w-12 h-12 bg-yello rounded-full text-white font-bold text-3xl text-center pt-1 absolute top-70 -right-6">+</div>
                     <div className="w-12 h-12 bg-yello rounded-full text-white font-bold text-3xl text-center pt-1 absolute top-130 -right-6">+</div>

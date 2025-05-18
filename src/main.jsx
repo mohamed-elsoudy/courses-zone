@@ -2,12 +2,14 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css'
-import HomePage from './components/HomePage.jsx';
+import HomePage from './components/pages/HomePage.jsx';
 import App from './App.jsx'
-import Hello from './components/Hello.jsx';
-import About from './components/About.jsx';
-import Courses from './components/Courses.jsx';
-import Workshops from './components/WorkShops.jsx';
+import Blog from './components/pages/Blog.jsx';
+import About from './components/pages/About.jsx';
+import Courses from './components/pages/Courses.jsx';
+import Workshops from './components/pages/WorkShops.jsx';
+import Consultations from './components/pages/Consultations.jsx';
+import Podcast from './components/pages/Podcast.jsx';
 
 const router = createBrowserRouter([{
   path: "/", 
@@ -18,8 +20,8 @@ const router = createBrowserRouter([{
       element: <HomePage />
     },
     {
-      path: 'hello',
-      element: <Hello />
+      path: 'blog',
+      element: <Blog />
     },
     {
       path: 'about',
@@ -32,6 +34,14 @@ const router = createBrowserRouter([{
     {
       path: 'workshops',
       element: <Workshops />
+    },
+    {
+      path: 'consultations',
+      element: <Consultations />
+    },
+    {
+      path: 'podcast',
+      element: <Podcast />
     },
   ]
 }
