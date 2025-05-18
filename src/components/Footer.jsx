@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faLinkedin, faBehance } from '@fortawesome/free-brands-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -14,13 +15,13 @@ function Footer() {
         {/* Navigation Links */}
         <div className="mb-8 text-center">
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-            <a href="#" className="hover:text-yello active">الرئيسية</a>
-            <a href="#" className="hover:text-yello">عن المدرب</a>
-            <a href="#" className="hover:text-yello">الدورات التدريبيه</a>
-            <a href="#" className="hover:text-yello">المدونه</a>
-            <a href="#" className="hover:text-yello">الاستشارات</a>
-            <a href="#" className="hover:text-yello">بودكاست</a>
-            <a href="#" className="hover:text-yello">تواصل معنا</a>
+            <NavLink to="/" className="hover:text-yello">الرئيسية</NavLink>
+            <NavLink to="/about" className="hover:text-yello">عن المدرب</NavLink>
+            <NavLink to="/courses" className="hover:text-yello">الدورات التدريبيه</NavLink>
+            <NavLink to="/hello" className="hover:text-yello">المدونه</NavLink>
+            <NavLink to="/consultations" className="hover:text-yello">الاستشارات</NavLink>
+            <NavLink to="/podcast" className="hover:text-yello">بودكاست</NavLink>
+            <NavLink to="/contact" className="hover:text-yello">تواصل معنا</NavLink>
           </div>
         </div>
         

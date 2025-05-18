@@ -5,6 +5,9 @@ import './index.css'
 import HomePage from './components/HomePage.jsx';
 import App from './App.jsx'
 import Hello from './components/Hello.jsx';
+import About from './components/About.jsx';
+import Courses from './components/Courses.jsx';
+import Workshops from './components/WorkShops.jsx';
 
 const router = createBrowserRouter([{
   path: "/", 
@@ -17,6 +20,18 @@ const router = createBrowserRouter([{
     {
       path: 'hello',
       element: <Hello />
+    },
+    {
+      path: 'about',
+      element: <About />
+    },
+    {
+      path: 'courses',
+      element: <Courses />
+    },
+    {
+      path: 'workshops',
+      element: <Workshops />
     },
   ]
 }

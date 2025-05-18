@@ -1,14 +1,18 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faUser, faUserPlus, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import CustomDropdown from './CustomDropDown';
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isCoursesDropdowwn, setIsCoursesDropdowwn] = useState(false)
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+  };
+  const toggleCoursesMenu = () => {
+    setIsCoursesDropdowwn(!isCoursesDropdowwn);
   };
 
   return (
@@ -22,13 +26,21 @@ function Header() {
         
         {/* Navigation Links in Arabic - Desktop */}
         <nav className="hidden xl:flex xl:justify-center space-x-2 w-1/2 mr-3 ml-0 font-semibold text-black">
-          <Link to="/" className="hover:text-gray-600 active">الرئيسية</Link>
-          <Link to="/hello" className="hover:text-gray-600">عن المدرب</Link>
-          <Link to="/courses" className="hover:text-gray-600">الدورات التدريبيه &#9662; </Link>
-          <Link to="/blog" className="hover:text-gray-600">المدونه</Link>
-          <Link to="/consultations" className="hover:text-gray-600">الاستشارات</Link>
-          <Link to="/podcast" className="hover:text-gray-600">بودكاست</Link>
-          <Link to="/contact" className="hover:text-gray-600">تواصل معنا</Link>
+          <NavLink to="/" className="hover:text-gray-600">الرئيسية</NavLink>
+          <NavLink to="/about" className="hover:text-gray-600">عن المدرب</NavLink>
+
+          <button onClick={toggleCoursesMenu} className="hover:text-gray-600 relative cursor-pointer">الدورات التدريبيه
+            &#9662;
+            <div className={`absolute text-sm text-right z-2 w-45 rounded-md shadow-xl -bottom-25 bg-white px-3 ${isCoursesDropdowwn ? 'block' : 'hidden'}`}>
+                <Link to='/courses' className='block p-2 border-b border-b-gray-200'>دورات تدريبية</Link>
+                <Link to="/workshops" className='p-2 block'>فعاليات ورش العمل</Link>
+            </div>
+          </button>
+
+          <NavLink to="/hello" className="hover:text-gray-600">المدونه</NavLink>
+          <NavLink to="/consultations" className="hover:text-gray-600">الاستشارات</NavLink>
+          <NavLink to="/podcast" className="hover:text-gray-600">بودكاست</NavLink>
+          <NavLink to="/contact" className="hover:text-gray-600">تواصل معنا</NavLink>
         </nav>
         
         {/* Mobile Navigation Menu */}
@@ -45,13 +57,13 @@ function Header() {
                 </button>
               </div>
               <nav className="flex flex-col space-y-6 items-center font-semibold text-xl text-black">
-                <Link to="/" className="hover:text-gray-600 active">الرئيسية</Link>
-                <Link to="/about" className="hover:text-gray-600">عن المدرب</Link>
-                <Link to="/courses" className="hover:text-gray-600">الدورات التدريبيه</Link>
-                <Link to="/blog" className="hover:text-gray-600">المدونه</Link>
-                <Link to="/consultations" className="hover:text-gray-600">الاستشارات</Link>
-                <Link to="/podcast" className="hover:text-gray-600">بودكاست</Link>
-                <Link to="/contact" className="hover:text-gray-600">تواصل معنا</Link>
+                <NavLink to="/" className="hover:text-gray-600">الرئيسية</NavLink>
+                <NavLink to="/about" className="hover:text-gray-600">عن المدرب</NavLink>
+                <NavLink to="/courses" className="hover:text-gray-600">الدورات التدريبيه &#9662; </NavLink>
+                <NavLink to="/hello" className="hover:text-gray-600">المدونه</NavLink>
+                <NavLink to="/consultations" className="hover:text-gray-600">الاستشارات</NavLink>
+                <NavLink to="/podcast" className="hover:text-gray-600">بودكاست</NavLink>
+                <NavLink to="/contact" className="hover:text-gray-600">تواصل معنا</NavLink>
               </nav>
               <div className="flex justify-center mt-8 space-x-4">
                 <Link to="/login" className="group bg-weak-maginta text-black hover:bg-maginta font-semibold hover:text-white rounded-full text-sm px-4 py-3 cursor-pointer transition-all duration-300">
