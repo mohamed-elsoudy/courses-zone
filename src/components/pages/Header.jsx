@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faUser, faUserPlus, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import CustomDropdown from '../CustomDropDown';
+import CustomDropdown from '../CustomDropdown';
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
