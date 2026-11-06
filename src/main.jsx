@@ -7,7 +7,7 @@ import App from './App.jsx'
 import Blog from './components/pages/Blog.jsx';
 import About from './components/pages/About.jsx';
 import Courses from './components/pages/Courses.jsx';
-import Workshops from './components/pages/WorkShops.jsx';
+import Workshops from './components/pages/Workshops.jsx';
 import Consultations from './components/pages/Consultations.jsx';
 import Podcast from './components/pages/Podcast.jsx';
 
