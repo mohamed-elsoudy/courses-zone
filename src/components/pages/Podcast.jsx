@@ -1,7 +1,7 @@
     import Pagination from "../Pagination";
     import Footer from "./Footer";
     import CustomPagination from "../CustomPagination";
-    import PodcastCard from "../PodcastCard";
+    import PodcastCard from "../podcastCard";
 
     function podcast() {
     return(
